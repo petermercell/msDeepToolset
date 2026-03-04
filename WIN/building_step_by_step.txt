@@ -1,0 +1,43 @@
+
+
+rm -rf build && mkdir build && cd build
+
+cmake .. -DNUKE_VERSION=15.1v5 -DCMAKE_INSTALL_PREFIX=~/.nuke
+
+
+make VERBOSE=1
+make install VERBOSE=1 
+
+////
+
+
+rm -r build -ErrorAction Ignore; mkdir build; cd build
+
+cmake .. -DNUKE_VERSION=16.0v1-Beta.4 -DCMAKE_INSTALL_PREFIX=$env:USERPROFILE/.nuke
+
+cmake --build . --verbose
+cmake --install . --verbose
+
+
+////
+
+cd C:\Users\WORKSTATION\Desktop\050225\16AGAIN\PRefToMotion4
+
+
+rmdir /s /q build
+mkdir build
+cd build
+
+
+
+///
+
+D:
+cd D:\COMPILED_WINDOWS\NEW\msTOOLS_FIN
+
+rmdir /s /q build
+mkdir build
+cd build
+cmake .. -G "Visual Studio 17 2022" -A x64 -DNUKE_VERSION=14.1v8 -DCMAKE_INSTALL_PREFIX=%USERPROFILE%\.nuke
+cmake --build . --config Release --verbose
+cmake --install . --config Release --verbose
